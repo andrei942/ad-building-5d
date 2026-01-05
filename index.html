@@ -2,19 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>AD Building 5D Version 5</title>
+  <title>AD Building 5D V5</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Landing -->
   <section id="landing">
     <h1>Welcome to AD Building 5D V5</h1>
     <p>Design your multi-floor home in 3D and AR. See real UK costs before building.</p>
     <a href="#builder" class="btn">Start Designing</a>
   </section>
 
-  <!-- Builder -->
   <main id="builder">
     <canvas id="scene"></canvas>
     <div id="panel">
@@ -26,6 +24,13 @@
 
       <label>Room</label>
       <select id="roomSelect"></select>
+
+      <label>Item Type</label>
+      <select id="itemType">
+        <option value="door">Door</option>
+        <option value="window">Window</option>
+        <option value="furniture">Furniture</option>
+      </select>
 
       <label>Material</label>
       <select id="material"></select>
@@ -50,6 +55,7 @@
       <p><strong>£<span id="houseTotal">0</span></strong></p>
 
       <button id="addFloor">Add Floor</button>
+      <button id="addItem">Add Item</button>
       <button id="save">Save Project</button>
       <button id="load">Load Project</button>
       <button id="export">Export Quote PDF</button>

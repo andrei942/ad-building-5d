@@ -1,0 +1,13 @@
+body {margin:0;font-family:Arial,sans-serif;}
+#landing{padding:30px;text-align:center;background:#eee;}
+#landing h1{font-size:2em;margin-bottom:10px;}
+#landing p{font-size:1.2em;margin-bottom:20px;}
+.btn{padding:10px 20px;background:#111;color:white;text-decoration:none;border-radius:5px;}
+
+main{display:flex;height:calc(100vh-120px);}
+canvas{flex:3;}
+#panel{flex:1;background:#f4f4f4;padding:15px;overflow-y:auto;}
+select,input,button{width:100%;padding:8px;margin-bottom:8px;}
+.costs p{margin:5px 0;}
+button{cursor:pointer;}
+.disclaimer{font-size:0.8em;color:#555;}

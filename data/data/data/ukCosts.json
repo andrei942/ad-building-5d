@@ -1,11 +1,9 @@
 {
   "door":{"wood":{"material":600,"labour":180},"steel":{"material":900,"labour":220},"glass":{"material":1200,"labour":200}},
   "window":{"upvc":{"material":800,"labour":150},"aluminium":{"material":1400,"labour":200}},
-  "wall":{"brick":{"material":55,"labour":180},"concrete":{"material":75,"labour":200}},
-  "floor":{"tile":{"material":25,"labour":20},"wood":{"material":35,"labour":25}},
-  "bathroomFloorTile":{"ceramic":{"material":30,"labour":25},"porcelain":{"material":45,"labour":35},"marble":{"material":90,"labour":60}},
-  "bathroomWallTile":{"ceramic":{"material":28,"labour":30},"mosaic":{"material":65,"labour":55}},
+  "furniture":{"sofa":{"material":500,"labour":100},"bed":{"material":400,"labour":80},"wardrobe":{"material":350,"labour":70}},
+  "tileFloor":{"ceramic":{"material":25,"labour":20},"wood":{"material":35,"labour":25}},
+  "tileWall":{"ceramic":{"material":28,"labour":30},"mosaic":{"material":65,"labour":55},"marble":{"material":90,"labour":60}},
   "sanitary":{"toilet":{"material":250,"labour":180},"sink":{"material":180,"labour":150},"shower":{"material":600,"labour":350}},
-  "kitchen":{"cabinet":{"material":200,"labour":150},"countertop":{"material":150,"labour":100},"sink":{"material":180,"labour":150}},
-  "furniture":{"sofa":{"material":500,"labour":100},"bed":{"material":400,"labour":80},"wardrobe":{"material":350,"labour":70}}
+  "kitchen":{"cabinet":{"material":200,"labour":150},"countertop":{"material":150,"labour":100},"sink":{"material":180,"labour":150}}
 }

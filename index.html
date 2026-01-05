@@ -2,25 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>AD Building 5D</title>
+  <title>AD Building 5D Version 5</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Landing Page -->
+  <!-- Landing -->
   <section id="landing">
-    <h1>Welcome to AD Building 5D</h1>
-    <p>Design your dream home in 3D and AR. See real UK costs before building.</p>
+    <h1>Welcome to AD Building 5D V5</h1>
+    <p>Design your multi-floor home in 3D and AR. See real UK costs before building.</p>
     <a href="#builder" class="btn">Start Designing</a>
   </section>
 
-  <!-- 3D Builder -->
+  <!-- Builder -->
   <main id="builder">
     <canvas id="scene"></canvas>
-
     <div id="panel">
       <h2>Selected Item</h2>
       <p id="selected">None</p>
+
+      <label>Floor</label>
+      <select id="floorSelect"></select>
 
       <label>Room</label>
       <select id="roomSelect"></select>
@@ -47,6 +49,7 @@
       <h3>Total House Cost</h3>
       <p><strong>£<span id="houseTotal">0</span></strong></p>
 
+      <button id="addFloor">Add Floor</button>
       <button id="save">Save Project</button>
       <button id="load">Load Project</button>
       <button id="export">Export Quote PDF</button>
@@ -57,7 +60,7 @@
     </div>
   </main>
 
-  <!-- Three.js + OrbitControls + ARButton + jsPDF -->
+  <!-- Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/controls/OrbitControls.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/webxr/ARButton.js"></script>

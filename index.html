@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AD Building 5D</title>
+  <title>AD Building 5D MVP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <h1>AD Building 5D</h1>
-  <p>Full House Cost Estimator (UK Average Prices)</p>
+  <h1>AD Building 5D MVP</h1>
+  <p>Interactive Room Designer + Cost Estimator</p>
 </header>
 
 <div id="info">
   <strong>Total Estimate:</strong> £<span id="price">0</span>
-  <p>(Estimated UK average – not a final quote)</p>
 </div>
 
 <div id="controls">
-  <label>Choose Room:
+  <label>Room:
     <select id="roomSelect">
       <option value="living">Living Room</option>
       <option value="bedroom">Bedroom</option>
-      <option value="kitchen">Kitchen</option>
-      <option value="bathroom">Bathroom</option>
     </select>
   </label>
 
-  <label>Material / Item:
+  <label>Item:
     <select id="itemSelect"></select>
   </label>
 
@@ -36,9 +33,7 @@
 
 <canvas id="scene"></canvas>
 
-<button onclick="generateReport()" id="reportBtn">
-  Download Detailed Estimate (£19.99)
-</button>
+<button onclick="generateReport()">Download Estimate PDF</button>
 
 <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>

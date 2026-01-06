@@ -1,76 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
   <title>AD Building 5D</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section id="landing">
-    <h1>AD Building 5D</h1>
-    <p>Design your house interactively and see real UK costs.</p>
-    <a href="#builder" class="btn">Start Designing</a>
-  </section>
 
-  <main id="builder">
-    <canvas id="scene"></canvas>
-    <div id="panel">
-      <h2>Selected Item</h2>
-      <p id="selected">None</p>
+<header>
+  <h1>AD Building 5D</h1>
+  <p>Full House Cost Estimator (UK Average Prices)</p>
+</header>
 
-      <label>Floor</label>
-      <select id="floorSelect"></select>
+<div id="info">
+  <strong>Total Estimate:</strong> £<span id="price">0</span>
+  <p>(Estimated UK average – not a final quote)</p>
+</div>
 
-      <label>Room</label>
-      <select id="roomSelect"></select>
+<div id="controls">
+  <label>Choose Room:
+    <select id="roomSelect">
+      <option value="living">Living Room</option>
+      <option value="bedroom">Bedroom</option>
+      <option value="kitchen">Kitchen</option>
+      <option value="bathroom">Bathroom</option>
+    </select>
+  </label>
 
-      <label>Item Type</label>
-      <select id="itemType">
-        <option value="door">Door</option>
-        <option value="window">Window</option>
-        <option value="furniture">Furniture</option>
-        <option value="tileFloor">Floor Tile</option>
-        <option value="tileWall">Wall Tile</option>
-        <option value="sanitary">Bathroom Item</option>
-        <option value="kitchen">Kitchen Item</option>
-      </select>
+  <label>Material / Item:
+    <select id="itemSelect"></select>
+  </label>
 
-      <label>Material</label>
-      <select id="material"></select>
+  <button onclick="addItem()">Add Item</button>
+</div>
 
-      <label>Quantity</label>
-      <input type="number" id="quantity" value="1" min="1">
+<canvas id="scene"></canvas>
 
-      <label>Area (m²)</label>
-      <input type="number" id="area" value="1" min="0.1" step="0.1">
+<button onclick="generateReport()" id="reportBtn">
+  Download Detailed Estimate (£19.99)
+</button>
 
-      <label>Rotation (deg)</label>
-      <input type="number" id="rotation" value="0" step="1">
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
 
-      <div class="costs">
-        <p>Material: £<span id="materialCost">0</span></p>
-        <p>Labour: £<span id="labourCost">0</span></p>
-        <p><strong>Total: £<span id="totalCost">0</span></strong></p>
-      </div>
-
-      <hr>
-      <h3>Total House Cost</h3>
-      <p><strong>£<span id="houseTotal">0</span></strong></p>
-
-      <button id="addFloor">Add Floor</button>
-      <button id="save">Save Project</button>
-      <button id="load">Load Project</button>
-      <button id="export">Export Quote PDF</button>
-      <button id="arView">AR Preview</button>
-    </div>
-  </main>
-
-  <!-- Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/controls/OrbitControls.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/webxr/ARButton.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>

@@ -1,13 +1,7 @@
-body {margin:0;font-family:Arial,sans-serif;}
-#landing{padding:30px;text-align:center;background:#eee;}
-#landing h1{font-size:2em;margin-bottom:10px;}
-#landing p{font-size:1.2em;margin-bottom:20px;}
-.btn{padding:10px 20px;background:#111;color:white;text-decoration:none;border-radius:5px;}
-
-main{display:flex;height:calc(100vh-120px);}
-canvas{flex:3;}
-#panel{flex:1;background:#f4f4f4;padding:15px;overflow-y:auto;}
-select,input,button{width:100%;padding:8px;margin-bottom:8px;}
-.costs p{margin:5px 0;}
-button{cursor:pointer;}
-.disclaimer{font-size:0.8em;color:#555;}
+body { margin:0; font-family: Arial, sans-serif; background:#f0f0f0; }
+header { background:#111; color:#fff; padding:15px; text-align:center; }
+#info { padding:10px; background:#fff; margin:10px; border-radius:5px; }
+#controls { padding:10px; background:#fff; margin:10px; border-radius:5px; display:flex; gap:10px; flex-wrap:wrap;}
+canvas { width:100%; height:60vh; display:block; margin:10px 0; border:1px solid #ccc; border-radius:5px; }
+button { padding:10px 15px; font-size:16px; cursor:pointer; background:#111; color:#fff; border:none; border-radius:5px;}
+select { padding:5px;}
